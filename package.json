@@ -1,0 +1,28 @@
+{
+  "name": "template-smart-contract-interaction",
+  "version": "1.0.0",
+  "description": "A template for interacting with smart contracts",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/banisingh/Template-Smart-Contract-Interaction.git"
+  },
+  "author": "Bani Singh",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/banisingh/Template-Smart-Contract-Interaction/issues"
+  },
+  "homepage": "https://github.com/banisingh/Template-Smart-Contract-Interaction#readme",
+  "dependencies": {
+    "web3": "github:ethereum/web3.js"
+  },
+  "devDependencies": {
+    "lite-server": "^2.3.0"
+  },
+  "scripts": {
+    "dev": "lite-server"
+  }
+}
