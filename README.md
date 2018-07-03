@@ -14,3 +14,4 @@ Once up and running you there are 2 functions to interact with of the smart cont
 
 ### Notes
 - Greeting.sol is included in the repo to have a look at what the smart contract we are interacting with looks like. This file is, however, not needed to interact with the smart contract on any of the ethereum networks as this template is specifically for contracts that are deployed already. In our case I have deployed Greetings.sol on the Ropsten Test Net and it can be found here: https://ropsten.etherscan.io/address/0x72c334893ab0493debf4eac516ee70a59244aec3
+
