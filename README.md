@@ -1,10 +1,10 @@
 # Template to interact with deployed smart contract on ethereum's blockchain
 This template allows a user to (a) utilise a smart contract template that can be deployed on Ethereum's blockchain, (b) connect the smart contract to a local repository, (c) interact with the smart contract through a frontend, and (d) customize frontend whilst still being connected to the smart contract. 
 
-- (a): [Secret.sol]
-- (b): [app.js]
-- (c): [app.js] and [index.html]
-- (d): [index.css]
+- (a): [Secret.sol]: Smart contract written in Solidity with two simple functions
+- (b): [app.js]: Interacting with the smart contract on Ethereum's blockchain - change two variables to add your own contract once you have deployed it.
+- (c): [app.js] and [index.html]: Intuitive and simple interaction between the html (frontend) and JavaScript (using web3.js to interact with the smart contract)
+- (d): [index.css]: Simple CSS to customize the website
 
 ### Get Started
 1. Clone Repository
