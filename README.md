@@ -1,10 +1,10 @@
 # Template to interact with deployed smart contract on ethereum's blockchain
 This template allows a user to (a) utilise a smart contract template that can be deployed on Ethereum's blockchain, (b) connect the smart contract to a local repository, (c) interact with the smart contract through a frontend, and (d) customize frontend whilst still being connected to the smart contract. 
 
-- (a): [Secret.sol]: Smart contract written in Solidity with two simple functions
-- (b): [app.js]: Interacting with the smart contract on Ethereum's blockchain - change two variables to add your own contract once you have deployed it.
-- (c): [app.js] and [index.html]: Intuitive and simple interaction between the html (frontend) and JavaScript (using web3.js to interact with the smart contract)
-- (d): [index.css]: Simple CSS to customize the website
+- (a): `Secret.sol`: Smart contract written in Solidity with two simple functions
+- (b): `app.js`: Interacting with the smart contract on Ethereum's blockchain - change two variables to add your own contract once you have deployed it.
+- (c): `app.js` and `index.html`: Intuitive and simple interaction between the html (frontend) and JavaScript (using web3.js to interact with the smart contract)
+- (d): `index.css`: Simple CSS to customize the website
 
 ### Get Started
 1. Clone Repository
@@ -19,7 +19,7 @@ This repository is connected to a deployed contract on Ropsten Test Network. The
 1. Use the smart contract in this repository as your template
 2. Go to Remix IDE (https://remix.ethereum.org/) and try interacting with the template to check that everything works
 3. Deploy the contract 
-4. Go to [app.js] and change the "ABI" and "var contractAddress"
+4. Go to [app.js] and change the `ABI` and `var contractAddress`
 
 ### Secret.sol
 Our template contract is written in Solidity and has two main funcitons:
