@@ -14,9 +14,9 @@ window.App = {
         App.getSecretWord(account) // Allows you to fetch the "getSecretWord" function from the smart contract //
       });
 
-			$(document).on('click', '#setSecretWord', (event) => { // This is where you set the secret word //
-				let input = document.getElementById("newSecretWord").value; // This function allows you to put in a new secret word every time //
-				App.setSecretWord(account,input) // Allows you to fetch the "setSecretWord" function from the smart contract //
+			$(document).on('click', '#setSecretWord', (event) => { // This is where you set the secret word
+				let input = document.getElementById("newSecretWord").value; // This function allows you to put in a new secret word every time
+				App.setSecretWord(account,input) // Allows you to fetch the "setSecretWord" function from the smart contract
       });
 
       return account
@@ -139,7 +139,7 @@ window.addEventListener('load', function() {
             		"type": "function"
             	}
             ]
-          var SharesContract = web3.eth.contract(abi);
+          var SharesContract = web3.eth.contract(abi); // Variable storing the ABI
           var contractAddress = '0x716dad17b7c672fbde48b87f7c6d22444555ea91'
           var instance = SharesContract.at(contractAddress);
           App.instance = instance;
