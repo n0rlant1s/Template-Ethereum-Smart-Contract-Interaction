@@ -4,24 +4,28 @@
 <head>
   <title> Smart Contract Interaction Template <!-- ADD A TITLE --> </title>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <link rel="stylesheet" href="stylesheets/index.css">
 </head>
 
 
 <body>
-  <h3> Tell me a secret <!-- A HEADER--></h3>
+  <h3> Tell me a secret! <!-- ADD A SUBHEADING --></h3>
 
   <div>
     <button id="getSecretWord">Tell me a secret!</button><h3><span style="font-weight: bold;" id="secretWordOutput"></span></h3>
   </div>
 
+  <br> <br>
+
   <div>
-    New Secret <input id="newSecretWord" type="text" name="newSecretWord">
+    <h3> New Secret <!-- ADD A SUBHEADING --></h3>
+    <input id="newSecretWord" type="text" name="newSecretWord">
     <button id="setSecretWord">Set!</button><h3><span id="setBtnResponse"></span></h3>
   </div>
 
   <br>
 
-  <span class="hint"><strong>Hint:</strong> open the browser developer console to view any errors and warnings.</span>
+  <span class="hint"><strong>Hint:</strong> Open the browser developer console to view any errors and warnings. Changes in the local file will automatically show up here. If not, double check your code. </span>
 
   <script src="javascript/web3.min.js"></script>
   <script src="javascript/app.js"></script>

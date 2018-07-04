@@ -1,5 +1,26 @@
 body {
  background-color:#F0F0F0;
  padding: 2em;
- font-family: ‘Raleway’,’Source Sans Pro’, ‘Arial’;
+ font-family: ‘Raleway’,’Source Sans Pro’, ‘sans-serif’;
+ margin-top: 30px;
+}
+
+h3 {
+  font-family: 'sans-serif';
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+}
+
+#getSecretWord {
+  font-family: 'sans-serif';
+  font-size: 12px;
+  padding: 10px;
+  border-radius: 30px 30px 30px 30px;
+}
+
+#setSecretWord {
+  font-family: 'sans-serif';
+  padding: 10px;
+  font-size: 12px;
+  border-radius: 30px 30px 30px 30px;
 }

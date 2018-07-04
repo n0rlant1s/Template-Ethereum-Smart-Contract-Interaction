@@ -1,8 +1,10 @@
+// Thanks to @aletna for teaching me this - a lot of the code here is written by him. Give him some creds.
+
 var Web3 = require('web3');
 
 window.App = {
-	instance: "No instance has been initiated, yet.",
-	network: "No network connected yet.",
+	instance: "No instance has been initiated, yet.", // For the console
+	network: "No network connected yet.", // For the console
 
   start: function(){
     let self = this
@@ -25,13 +27,12 @@ window.App = {
 
   },
 
-  fetchAccount: function(){
+  fetchAccount: function(){ // Function for getting the account
     let self = this;
 
     return new Promise(function(res, rej){
 
-      // Get the initial account balance so it can be displayed.
-      web3.eth.getAccounts(function(err, accounts) {
+      web3.eth.getAccounts(function(err, accounts) { // Getting the initial account balance so it can be displayed.
         if (err != null) {
           rej("There was an error fetching your accounts.")
         }
@@ -40,14 +41,13 @@ window.App = {
           rej("Couldn't get any accounts! Make sure your Ethereum client is configured correctly.");
         }
 
-        // resolve with account
         res(accounts[0])
 
       });
     })
   },
 
-  getSecretWord: function(account) { // Function for getting the Secret Word //
+  getSecretWord: function(account) { // Function for getting the Secret Word
     let self = this;
 
     let SecretWord = new Promise(function(resolve, reject){
@@ -58,11 +58,11 @@ window.App = {
 
     Promise.resolve(SecretWord)
     .then(function(string){
-			document.getElementById("secretWordOutput").innerHTML = " >>>>> " + string;
+			document.getElementById("secretWordOutput").innerHTML = " >>>>> " + string; // Allowing the JavaScript to interact with our HTML
     })
   },
 
-  setSecretWord: function(account, input) { // Function for setting the secret word //
+  setSecretWord: function(account, input) { // Function for setting the secret word
 		let self = this;
 
 		let SecretWord = new Promise(function(resolve, reject){
@@ -73,7 +73,7 @@ window.App = {
 
     Promise.resolve(SecretWord)
     .then(function(string){
-			console.log("setting the new secret word to: '"+input+"'"); // Showing the secret word in console //
+			console.log("setting the new secret word to: '"+input+"'"); // Showing the secret word in console
     })
   }
 
@@ -81,24 +81,22 @@ window.App = {
 
 
 window.addEventListener('load', function() {
-  // Checking if Web3 has been injected by the browser (Mist/MetaMask)
-  if (typeof web3 !== 'undefined') {
+  if (typeof web3 !== 'undefined') {  // Checking if Web3 has been injected by the browser (Mist/MetaMask)
     console.warn("Using web3 http://truffleframework.com/tutorials/truffle-and-metamask")
-    // Use Mist/MetaMask's provider
-    window.web3 = new Web3(web3.currentProvider);
+    window.web3 = new Web3(web3.currentProvider); // Use Mist/MetaMask's provider
 
     web3.version.getNetwork((err, netId) => {
 
-      switch (netId) {
+      switch (netId) { // Allowing us to change between multiple Ethereum networks
 
         // NetId = 1 is Ethereum Main Net
 
         /*
         case "1":
           console.warn('You are using the Ethereum Main Network')
-          var abi = // PASTE ABI HERE
+          var abi = // PASTE ABI HERE: This can be found in your Remix IDE
           var SharesContract = web3.eth.contract(abi);
-          var contractAddress = // PASTE 'CONTRACT' HERE
+          var contractAddress = // PASTE 'CONTRACT' HERE: Can be found in your Remix IDE
           var instance = SharesContract.at(contractAddress);
           App.instance = instance;
           App.network = 1;
@@ -106,8 +104,7 @@ window.addEventListener('load', function() {
           break
         */
 
-        // NetId = 3 is Ropsten Test Net
-        case "3":
+        case "3": // NetId = 3 is Ropsten Test Net
           console.warn('You are using the Ropsten Test Network.')
           var abi = [
             	{
@@ -140,7 +137,7 @@ window.addEventListener('load', function() {
             	}
             ]
           var SharesContract = web3.eth.contract(abi); // Variable storing the ABI
-          var contractAddress = '0x716dad17b7c672fbde48b87f7c6d22444555ea91'
+          var contractAddress = '0x716dad17b7c672fbde48b87f7c6d22444555ea91' // Storing the contract address found in your Remix IDE
           var instance = SharesContract.at(contractAddress);
           App.instance = instance;
           App.network = 3;
