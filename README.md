@@ -1,17 +1,29 @@
 # Template to interact with deployed smart contract on ethereum's blockchain
-*this project specifically will only run on the ropsten test net, any smart contract deployed on other test nets will need to be added to the switch function at the bottom of app.js*
+This template allows a user to (a) utilise a smart contract template that can be deployed on Ethereum's blockchain, (b) connect the smart contract to a local repository, (c) interact with the smart contract through a frontend, and (d) customize frontend whilst still being connected to the smart contract. 
 
+- (a): [Secret.sol]
+- (b): [app.js]
+- (c): [app.js] and [index.html]
+- (d): [index.css]
 
 ### Get Started
 1. Clone Repository
 2. cd To Repository
 3. Run `npm install`
 4. Run local server: `npm run dev`
+5. Edit changes to the template in a code editor. Changes are automatically shown on localhost. 
 
-Once up and running you there are 2 functions to interact with of the smart contract
-- `setGreeting`: Let's you store any greeting string
-- `callGreeting`: Retrieves the latest greeting string stored
+### The smart contract
+This repository is connected to a deployed contract on Ropsten Test Network. The smart contract in this repository [Secret.sol] is simply included as a smart contract template. To add your own contract:
 
-### Notes
-- Greeting.sol is included in the repo to have a look at what the smart contract we are interacting with looks like. This file is, however, not needed to interact with the smart contract on any of the ethereum networks as this template is specifically for contracts that are deployed already. In our case I have deployed Greetings.sol on the Ropsten Test Net and it can be found here: https://ropsten.etherscan.io/address/0x72c334893ab0493debf4eac516ee70a59244aec3
+1. Use the smart contract in this repository as your template
+2. Go to Remix IDE (https://remix.ethereum.org/) and try interacting with the template to check that everything works
+3. Deploy the contract 
+4. Go to [app.js] and change the "ABI" and "var contractAddress"
+
+### Secret.sol
+Our template contract is written in Solidity and has two main funcitons:
+- `setSecretWord` allows the user to set "a secret word"
+- `getSecretWord`: retrieving the latest "secret word"
+
 
