@@ -26,6 +26,8 @@ Our template contract is written in Solidity and has two main funcitons:
 - `setSecretWord` allows the user to set "a secret word"
 - `getSecretWord`: retrieving the latest "secret word"
 
+The file is included in this repo for reference, but not used for other purposes. The exact same smart contract is deployed on Ropsten - hence, changes in this file will not affect the template.
+
 ### Please read:
 1. You need MetaMask for this template - it is injecting the web3
 2. If you are using the pre-made template, remember switching to "Ropsten Test Network" on MetaMask
